@@ -330,28 +330,23 @@ footer {
         font-size: 30px;
     }
 
-
-
-   /* =========================
-   DIARY BOOK
+/* =========================
+   DIARY JOURNAL
    ========================= */
 
 .diary-page {
     width: 1100px;
-    max-width: 95%;
+    max-width: 94%;
     margin: 35px auto;
     text-align: center;
 }
-
-
-/* Diary heading */
 
 .diary-heading {
     margin-bottom: 25px;
 }
 
 .diary-heading h1 {
-    margin: 10px 0 5px;
+    margin: 8px 0;
 
     color: #a34f70;
 
@@ -372,44 +367,53 @@ footer {
 
 
 /* =========================
-   THE BOOK
+   JOURNAL
    ========================= */
 
-.book {
-    width: 100%;
-    max-width: 1000px;
-
+.journal {
+    width: 900px;
+    max-width: 100%;
     margin: 0 auto;
 
-    perspective: 2000px;
+    perspective: 2500px;
 }
 
-
-/* Two-page spread */
-
-.book-spread {
+.book-cover {
     position: relative;
 
-    display: flex;
+    padding: 18px;
 
-    width: 100%;
-    height: 600px;
+    background: #c78391;
 
-    background: #d6a99a;
-
-    border: 3px solid #b77c82;
+    border-radius: 7px;
 
     box-shadow:
-        10px 12px 0 #d9b2b9,
-        0 15px 35px rgba(80, 45, 45, 0.25);
+        0 12px 25px rgba(80, 45, 45, 0.25),
+        7px 8px 0 #e2b5be;
 }
 
 
 /* =========================
-   INDIVIDUAL PAGES
+   OPEN BOOK
    ========================= */
 
-.book-page {
+.book {
+    position: relative;
+
+    width: 100%;
+    height: 570px;
+
+    display: flex;
+
+    transform-style: preserve-3d;
+}
+
+
+/* =========================
+   PAGES
+   ========================= */
+
+.page {
     position: relative;
 
     width: 50%;
@@ -417,11 +421,15 @@ footer {
 
     overflow: hidden;
 
-    background-color: #fffdf5;
+    background: #fffdf4;
+}
 
-    /*
-       Notebook lines
-    */
+.paper {
+    position: absolute;
+
+    inset: 0;
+
+    background-color: #fffdf4;
 
     background-image:
         repeating-linear-gradient(
@@ -432,23 +440,43 @@ footer {
             transparent 33px
         );
 
-    text-align: left;
-
-    padding: 60px 55px;
+    box-shadow:
+        inset 0 0 25px rgba(110, 70, 60, 0.07);
 }
 
 
-/* Pink notebook margin */
+/* Left page */
 
-.book-page::before,
-.flip-front::before,
-.flip-back::before {
+.left-page {
+    border-radius: 5px 0 0 5px;
+
+    box-shadow:
+        inset -12px 0 20px rgba(90, 55, 50, 0.12);
+}
+
+
+/* Right page */
+
+.right-page {
+    border-radius: 0 5px 5px 0;
+
+    box-shadow:
+        inset 12px 0 20px rgba(90, 55, 50, 0.12);
+}
+
+
+/* =========================
+   PINK NOTEBOOK MARGIN
+   ========================= */
+
+.left-page .paper::before,
+.right-page .paper::before,
+.turning-page .paper::before {
 
     content: "";
 
     position: absolute;
 
-    left: 45px;
     top: 0;
     bottom: 0;
 
@@ -457,61 +485,49 @@ footer {
     background: #e5a9b8;
 }
 
-
-/* Left page */
-
-.left-page {
-    border-right: 1px solid #c5aaa0;
+.left-page .paper::before {
+    left: 55px;
 }
 
-
-/* Right page */
-
-.right-page {
-    border-left: 1px solid #c5aaa0;
+.right-page .paper::before,
+.turning-page .paper::before {
+    left: 55px;
 }
 
 
 /* =========================
-   PAGE CONTENT
+   BOOK SPINE
    ========================= */
 
-.page-content {
+.book::after {
 
-    position: relative;
+    content: "";
 
-    height: 100%;
+    position: absolute;
 
-    padding-left: 20px;
+    z-index: 20;
 
-    font-family:
-        "Comic Sans MS",
-        "Segoe Print",
-        cursive;
+    top: 0;
+    bottom: 0;
 
-    color: #5f4949;
-}
+    left: 50%;
 
+    width: 5px;
 
-.little-flower {
+    transform: translateX(-50%);
 
-    color: #c46f8c;
+    background:
+        linear-gradient(
+            to right,
+            #c29a91,
+            #f0d2c9,
+            #c29a91
+        );
 
-    font-size: 30px;
+    box-shadow:
+        0 0 8px rgba(80, 40, 40, 0.25);
 
-    margin-bottom: 20px;
-
-}
-
-
-.empty-page {
-
-    font-size: 20px;
-
-    line-height: 33px;
-
-    color: #876b6b;
-
+    pointer-events: none;
 }
 
 
@@ -525,10 +541,6 @@ footer {
 
     bottom: 20px;
 
-    left: 50%;
-
-    transform: translateX(-50%);
-
     color: #b78787;
 
     font-family: Georgia, serif;
@@ -536,19 +548,31 @@ footer {
     font-size: 13px;
 }
 
+.left-page .page-number {
+    left: 35px;
+}
+
+.right-page .page-number {
+    right: 35px;
+}
+
+.turning-page .page-number {
+    right: 35px;
+}
+
 
 /* =========================
-   PAGE FLIP
+   TURNING PAGE
    ========================= */
 
-.page-flip {
+.turning-page {
 
     position: absolute;
 
-    z-index: 5;
+    z-index: 10;
 
-    right: 0;
     top: 0;
+    right: 0;
 
     width: 50%;
     height: 100%;
@@ -558,115 +582,57 @@ footer {
     transform-style: preserve-3d;
 
     transition:
-        transform 1s ease;
+        transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 
     cursor: pointer;
 }
 
-
-/* Front and back of turning page */
-
-.flip-front,
-.flip-back {
-
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    top: 0;
-    left: 0;
+.turning-page .paper {
 
     backface-visibility: hidden;
 
-    background-color: #fffdf5;
-
-    background-image:
-        repeating-linear-gradient(
-            to bottom,
-            transparent 0px,
-            transparent 31px,
-            #cbd9e2 32px,
-            transparent 33px
-        );
-
-    padding: 60px 55px;
-
-    text-align: left;
-
-    box-shadow:
-        inset 10px 0 15px rgba(80, 50, 50, 0.08);
+    border-radius: 0 5px 5px 0;
 }
 
+.turning-page .front {
 
-.flip-back {
+    z-index: 2;
+
+    transform: rotateY(0deg);
+
+    box-shadow:
+        inset 12px 0 20px rgba(90, 55, 50, 0.12);
+}
+
+.turning-page .back {
 
     transform: rotateY(180deg);
 
+    box-shadow:
+        inset -12px 0 20px rgba(90, 55, 50, 0.12);
 }
 
-
-/* Turn the page */
-
-.page-flip.flipped {
+.turning-page.flipped {
 
     transform: rotateY(-180deg);
-
 }
 
 
 /* =========================
-   CONTROLS
+   CLICK HINT
    ========================= */
 
-.book-controls {
+.turn-hint {
 
-    display: flex;
+    margin-top: 22px;
 
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 30px;
-
-    margin-top: 25px;
-}
-
-
-.book-controls button {
-
-    border: 2px solid #c8879d;
-
-    background: #fff4f6;
-
-    color: #934d68;
-
-    padding: 10px 18px;
+    color: #966576;
 
     font-family: Georgia, serif;
 
-    font-size: 15px;
-
-    cursor: pointer;
-
-    box-shadow: 3px 3px 0 #e3b6c2;
-
-}
-
-
-.book-controls button:hover {
-
-    background: #f9dce5;
-
-}
-
-
-#pageIndicator {
-
-    color: #89616b;
+    font-size: 14px;
 
     font-style: italic;
-
 }
 
 
@@ -676,26 +642,30 @@ footer {
 
 @media (max-width: 700px) {
 
-    .book-spread {
-
-        height: 500px;
-
+    .journal {
+        width: 100%;
     }
 
-    .book-page {
-
-        padding: 40px 30px;
-
+    .book {
+        height: 480px;
     }
 
-    .book-page::before,
-    .flip-front::before,
-    .flip-back::before {
+    .book-cover {
+        padding: 10px;
+    }
 
-        left: 25px;
+    .diary-heading h1 {
+        font-size: 32px;
+    }
 
+    .left-page .paper::before,
+    .right-page .paper::before,
+    .turning-page .paper::before {
+        left: 30px;
     }
 
 }
 
-}
+   
+
+

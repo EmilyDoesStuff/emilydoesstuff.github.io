@@ -832,4 +832,31 @@ footer {
 
 }
 
+/* =========================
+   DIARY STICKERS
+   ========================= */
+
+.sticker {
+    position: absolute;
+    z-index: 10;
+
+    font-size: 38px;
+
+    filter: drop-shadow(2px 3px 2px rgba(80, 40, 50, 0.18));
+
+    transform: rotate(-8deg);
+}
+
+.sticker-left {
+    top: 18px;
+    left: 18px;
+}
+
+.sticker-right {
+    right: 18px;
+    bottom: 18px;
+
+    transform: rotate(8deg);
+}
+
 

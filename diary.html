@@ -2,147 +2,87 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>my diary ♡</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
     <div class="diary-page">
 
-        <!-- BOOK HEADER -->
-
         <div class="diary-heading">
-
             <a href="index.html">♡ back home</a>
 
             <h1>my diary</h1>
 
             <p>a little book of thoughts & memories</p>
-
         </div>
 
 
-        <!-- BOOK -->
+        <div class="journal">
 
-        <div class="book">
+            <div class="book-cover">
 
-            <div class="book-spread">
+                <div class="book">
 
+                    <!-- LEFT PAGE -->
 
-                <!-- LEFT PAGE -->
+                    <div class="page left-page">
 
-                <div class="book-page left-page">
+                        <div class="paper">
 
-                    <div class="page-content">
-
-                        <div class="little-flower">
-                            ✿
-                        </div>
-
-                        <p class="empty-page">
-                            this page is waiting<br>
-                            to be filled ♡
-                        </p>
-
-                    </div>
-
-                    <span class="page-number">1</span>
-
-                </div>
-
-
-                <!-- RIGHT PAGE -->
-
-                <div class="book-page right-page">
-
-                    <div class="page-content">
-
-                        <div class="little-flower">
-                            ❀
-                        </div>
-
-                        <p class="empty-page">
-                            dear diary...
-                        </p>
-
-                    </div>
-
-                    <span class="page-number">2</span>
-
-                </div>
-
-
-                <!-- PAGE TURN -->
-
-                <div class="page-flip">
-
-                    <div class="flip-front">
-
-                        <div class="page-content">
-
-                            <div class="little-flower">
-                                ❀
-                            </div>
-
-                            <p class="empty-page">
-                                turn the page ♡
-                            </p>
+                            <span class="page-number">1</span>
 
                         </div>
-
-                        <span class="page-number">2</span>
 
                     </div>
 
 
-                    <div class="flip-back">
+                    <!-- RIGHT PAGE -->
 
-                        <div class="page-content">
+                    <div class="page right-page">
 
-                            <div class="little-flower">
-                                ✿
-                            </div>
+                        <div class="paper">
+
+                            <span class="page-number">2</span>
 
                         </div>
 
-                        <span class="page-number">3</span>
+                    </div>
+
+
+                    <!-- TURNING PAGE -->
+
+                    <div class="turning-page">
+
+                        <div class="paper front">
+
+                            <span class="page-number">2</span>
+
+                        </div>
+
+                        <div class="paper back">
+
+                            <span class="page-number">3</span>
+
+                        </div>
 
                     </div>
 
                 </div>
-
 
             </div>
 
         </div>
 
 
-        <!-- PAGE CONTROLS -->
-
-        <div class="book-controls">
-
-            <button id="previousPage">
-                ← previous
-            </button>
-
-            <span id="pageIndicator">
-                pages 1 — 2
-            </span>
-
-            <button id="nextPage">
-                next →
-            </button>
-
-        </div>
-
+        <p class="turn-hint">
+            click the right page to turn ♡
+        </p>
 
     </div>
 

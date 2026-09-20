@@ -329,6 +329,7 @@ footer {
     .header h1 {
         font-size: 30px;
     }
+    }
 
 /* =========================
    DIARY JOURNAL
@@ -832,15 +833,3 @@ footer {
 }
 
 
-.diary-page {
-    background: pink !important;
-    min-height: 100vh !important;
-}
-
-.journal {
-    display: block !important;
-    background: red !important;
-    width: 900px !important;
-    height: 600px !important;
-    margin: 20px auto !important;
-}

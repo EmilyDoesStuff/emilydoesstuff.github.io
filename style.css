@@ -1,0 +1,333 @@
+/* =========================
+   GENERAL
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f7eadc;
+    color: #5b4141;
+    font-family: Georgia, "Times New Roman", serif;
+
+    /* Makes the page feel like old paper */
+    background-image:
+        radial-gradient(#ead5c4 1px, transparent 1px);
+    background-size: 18px 18px;
+}
+
+a {
+    color: #a34f70;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d36c92;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MAIN PAGE
+   ========================= */
+
+.page {
+    width: 1000px;
+    max-width: 94%;
+    margin: 35px auto;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+    background: #fff8ef;
+    border: 3px solid #d99aad;
+    padding: 30px;
+    text-align: center;
+
+    box-shadow:
+        6px 6px 0 #e7b8c5;
+
+    position: relative;
+}
+
+.header h1 {
+    margin: 8px 0;
+
+    color: #a34f70;
+
+    font-family: Georgia, serif;
+    font-size: 42px;
+
+    text-shadow: 2px 2px #f1ccd6;
+}
+
+.header p {
+    font-style: italic;
+    color: #806060;
+}
+
+.flowers {
+    color: #c87391;
+    font-size: 20px;
+    letter-spacing: 8px;
+}
+
+
+/* =========================
+   TWO COLUMN LAYOUT
+   ========================= */
+
+.layout {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 25px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sidebar > div {
+    background: #fff8ef;
+
+    border: 2px solid #d9a1b1;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 4px 4px 0 #e8c2ca;
+}
+
+
+/* =========================
+   PROFILE
+   ========================= */
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-picture {
+    width: 130px;
+    height: 130px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f3ccd6;
+
+    border: 5px double #c77994;
+
+    color: #a34f70;
+
+    font-size: 50px;
+}
+
+.profile-card h2 {
+    color: #a34f70;
+    font-size: 20px;
+}
+
+.profile-card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.navigation h3 {
+    text-align: center;
+
+    color: #a34f70;
+
+    margin-top: 0;
+}
+
+.navigation a {
+    display: block;
+
+    padding: 8px 5px;
+
+    border-bottom: 1px dashed #dfb6c2;
+
+    font-size: 15px;
+}
+
+.navigation a:hover {
+    background: #fde6ed;
+}
+
+
+/* =========================
+   CURRENTLY
+   ========================= */
+
+.currently h3 {
+    color: #a34f70;
+    text-align: center;
+}
+
+.currently p {
+    font-size: 13px;
+    margin: 12px 0;
+}
+
+
+/* =========================
+   FEED
+   ========================= */
+
+.feed-title {
+    background: #fff8ef;
+
+    border: 2px solid #d9a1b1;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 4px 4px 0 #e8c2ca;
+}
+
+.feed-title h2 {
+    margin: 0;
+
+    color: #a34f70;
+
+    font-size: 25px;
+}
+
+.feed-title p {
+    margin-bottom: 0;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   POSTS
+   ========================= */
+
+.post {
+    background: #fffaf3;
+
+    border: 2px solid #d9a1b1;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 5px 5px 0 #e6c0c9;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    border-bottom: 1px dashed #d9a1b1;
+
+    padding-bottom: 15px;
+
+    margin-bottom: 20px;
+}
+
+.post-header > span {
+    font-size: 25px;
+}
+
+.post-header strong {
+    display: block;
+
+    color: #8f4563;
+}
+
+.post-header small {
+    color: #997979;
+}
+
+.post p {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.post-decoration {
+    text-align: center;
+
+    color: #c87391;
+
+    margin: 25px 0;
+
+    letter-spacing: 10px;
+}
+
+.post-footer {
+    border-top: 1px dashed #d9a1b1;
+
+    padding-top: 12px;
+
+    color: #a45a75;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    margin-top: 25px;
+
+    background: #f2ccd5;
+
+    border: 2px solid #d99aad;
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: #815263;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .page {
+        max-width: 95%;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+}

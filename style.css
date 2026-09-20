@@ -330,4 +330,372 @@ footer {
         font-size: 30px;
     }
 
+
+
+   /* =========================
+   DIARY BOOK
+   ========================= */
+
+.diary-page {
+    width: 1100px;
+    max-width: 95%;
+    margin: 35px auto;
+    text-align: center;
+}
+
+
+/* Diary heading */
+
+.diary-heading {
+    margin-bottom: 25px;
+}
+
+.diary-heading h1 {
+    margin: 10px 0 5px;
+
+    color: #a34f70;
+
+    font-family: Georgia, serif;
+    font-size: 42px;
+
+    text-shadow: 2px 2px #f1ccd6;
+}
+
+.diary-heading p {
+    color: #806060;
+    font-style: italic;
+}
+
+.diary-heading a {
+    color: #a34f70;
+}
+
+
+/* =========================
+   THE BOOK
+   ========================= */
+
+.book {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    perspective: 2000px;
+}
+
+
+/* Two-page spread */
+
+.book-spread {
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+    height: 600px;
+
+    background: #d6a99a;
+
+    border: 3px solid #b77c82;
+
+    box-shadow:
+        10px 12px 0 #d9b2b9,
+        0 15px 35px rgba(80, 45, 45, 0.25);
+}
+
+
+/* =========================
+   INDIVIDUAL PAGES
+   ========================= */
+
+.book-page {
+    position: relative;
+
+    width: 50%;
+    height: 100%;
+
+    overflow: hidden;
+
+    background-color: #fffdf5;
+
+    /*
+       Notebook lines
+    */
+
+    background-image:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0px,
+            transparent 31px,
+            #cbd9e2 32px,
+            transparent 33px
+        );
+
+    text-align: left;
+
+    padding: 60px 55px;
+}
+
+
+/* Pink notebook margin */
+
+.book-page::before,
+.flip-front::before,
+.flip-back::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 45px;
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+
+    background: #e5a9b8;
+}
+
+
+/* Left page */
+
+.left-page {
+    border-right: 1px solid #c5aaa0;
+}
+
+
+/* Right page */
+
+.right-page {
+    border-left: 1px solid #c5aaa0;
+}
+
+
+/* =========================
+   PAGE CONTENT
+   ========================= */
+
+.page-content {
+
+    position: relative;
+
+    height: 100%;
+
+    padding-left: 20px;
+
+    font-family:
+        "Comic Sans MS",
+        "Segoe Print",
+        cursive;
+
+    color: #5f4949;
+}
+
+
+.little-flower {
+
+    color: #c46f8c;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.empty-page {
+
+    font-size: 20px;
+
+    line-height: 33px;
+
+    color: #876b6b;
+
+}
+
+
+/* =========================
+   PAGE NUMBERS
+   ========================= */
+
+.page-number {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #b78787;
+
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   PAGE FLIP
+   ========================= */
+
+.page-flip {
+
+    position: absolute;
+
+    z-index: 5;
+
+    right: 0;
+    top: 0;
+
+    width: 50%;
+    height: 100%;
+
+    transform-origin: left center;
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 1s ease;
+
+    cursor: pointer;
+}
+
+
+/* Front and back of turning page */
+
+.flip-front,
+.flip-back {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    backface-visibility: hidden;
+
+    background-color: #fffdf5;
+
+    background-image:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0px,
+            transparent 31px,
+            #cbd9e2 32px,
+            transparent 33px
+        );
+
+    padding: 60px 55px;
+
+    text-align: left;
+
+    box-shadow:
+        inset 10px 0 15px rgba(80, 50, 50, 0.08);
+}
+
+
+.flip-back {
+
+    transform: rotateY(180deg);
+
+}
+
+
+/* Turn the page */
+
+.page-flip.flipped {
+
+    transform: rotateY(-180deg);
+
+}
+
+
+/* =========================
+   CONTROLS
+   ========================= */
+
+.book-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-top: 25px;
+}
+
+
+.book-controls button {
+
+    border: 2px solid #c8879d;
+
+    background: #fff4f6;
+
+    color: #934d68;
+
+    padding: 10px 18px;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    box-shadow: 3px 3px 0 #e3b6c2;
+
+}
+
+
+.book-controls button:hover {
+
+    background: #f9dce5;
+
+}
+
+
+#pageIndicator {
+
+    color: #89616b;
+
+    font-style: italic;
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .book-spread {
+
+        height: 500px;
+
+    }
+
+    .book-page {
+
+        padding: 40px 30px;
+
+    }
+
+    .book-page::before,
+    .flip-front::before,
+    .flip-back::before {
+
+        left: 25px;
+
+    }
+
+}
+
 }

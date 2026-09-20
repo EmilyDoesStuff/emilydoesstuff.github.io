@@ -871,4 +871,64 @@ footer {
     transform: rotate(8deg);
 }
 
+/* =========================
+   DIARY HANDWRITING
+   ========================= */
+
+.diary-entry {
+    position: absolute;
+
+    top: 25px;
+    left: 75px;
+    right: 30px;
+
+    text-align: left;
+
+    color: #654b55;
+
+    font-family: "Comic Sans MS", "Segoe Print", cursive;
+
+    font-size: 17px;
+
+    line-height: 32px;
+}
+
+.diary-entry .entry-date {
+    font-size: 13px;
+    color: #a56b80;
+
+    line-height: 32px;
+}
+
+.diary-entry h2 {
+    margin: 0;
+
+    color: #a34f70;
+
+    font-family: "Comic Sans MS", "Segoe Print", cursive;
+
+    font-size: 21px;
+
+    font-weight: normal;
+
+    line-height: 32px;
+}
+
+.diary-entry p {
+    margin: 0;
+
+    font-size: 17px;
+
+    line-height: 32px;
+
+    white-space: pre-line;
+}
+
+.diary-entry .entry-signature {
+    margin-top: 10px;
+
+    color: #a34f70;
+
+    font-size: 17px;
+}
 

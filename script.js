@@ -1,62 +1,35 @@
-const bookPage = document.querySelector(".page-flip");
-const nextButton = document.querySelector("#nextPage");
-const previousButton = document.querySelector("#previousPage");
+document.addEventListener("DOMContentLoaded", function () {
 
-let isFlipped = false;
+    const bookPage = document.querySelector(".page-flip");
+    const nextButton = document.querySelector("#nextPage");
+    const previousButton = document.querySelector("#previousPage");
 
-
-/* Turn the page */
-
-function turnPage() {
-
-    isFlipped = true;
-
-    bookPage.classList.add("flipped");
-
-}
-
-
-/* Turn the page back */
-
-function turnPageBack() {
-
-    isFlipped = false;
-
-    bookPage.classList.remove("flipped");
-
-}
-
-
-/* Click the page */
-
-bookPage.addEventListener("click", function () {
-
-    if (isFlipped) {
-
-        turnPageBack();
-
-    } else {
-
-        turnPage();
-
+    if (!bookPage) {
+        return;
     }
 
-});
+    function nextPage() {
+        bookPage.classList.add("flipped");
+    }
 
+    function previousPage() {
+        bookPage.classList.remove("flipped");
+    }
 
-/* Next button */
+    bookPage.addEventListener("click", function () {
+        bookPage.classList.toggle("flipped");
+    });
 
-nextButton.addEventListener("click", function () {
+    if (nextButton) {
+        nextButton.addEventListener("click", function () {
+            nextPage();
+        });
+    }
 
-    turnPage();
-
-});
-
-
-/* Previous button */
-
-previousButton.addEventListener("click", function () {
-
-    turnPageBack();
+    if (previousButton) {
+        previousButton.addEventListener("click", function () {
+            previousPage();
+        });
+    }
 
 });

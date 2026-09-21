@@ -885,3 +885,95 @@ a.life-card {
     }
 
 }
+
+/* =========================
+   SCRAPBOOK
+   ========================= */
+
+.scrapbook-photo {
+    width: 70%;
+    height: 300px;
+
+    margin: 70px auto 20px;
+
+    background: #f3e5dc;
+
+    border: 6px solid #fffaf3;
+
+    box-shadow:
+        2px 3px 8px rgba(80, 40, 50, 0.18);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: rotate(-2deg);
+}
+
+.scrapbook-photo-right {
+    transform: rotate(2deg);
+}
+
+.photo-placeholder {
+    color: #a56b80;
+
+    font-family:
+        "Segoe Print",
+        "Bradley Hand",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 15px;
+
+    text-align: center;
+}
+
+.scrapbook-caption {
+    width: 70%;
+
+    margin: 0 auto;
+
+    text-align: left;
+
+    color: #654b55;
+
+    font-family:
+        "Segoe Print",
+        "Bradley Hand",
+        "Comic Sans MS",
+        cursive;
+}
+
+.scrapbook-caption small {
+    color: #a56b80;
+
+    font-size: 12px;
+}
+
+.scrapbook-caption p {
+    margin-top: 6px;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   MOBILE SCRAPBOOK
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .scrapbook-photo {
+        width: 75%;
+        height: 220px;
+
+        margin-top: 55px;
+    }
+
+    .scrapbook-caption {
+        width: 75%;
+    }
+
+}

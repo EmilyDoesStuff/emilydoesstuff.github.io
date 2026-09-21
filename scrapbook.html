@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>scrapbook ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="diary-page">
+
+        <!-- HEADER -->
+
+        <header class="diary-heading">
+
+            <div class="flowers">✿ ❀ ✿ ❀ ✿</div>
+
+            <h1>scrapbook ♡</h1>
+
+            <p>
+                little pieces of life i've decided to keep
+            </p>
+
+            <div class="flowers">❀ ✿ ❀ ✿ ❀</div>
+
+            <p>
+                <a href="index.html">♡ back home ♡</a>
+            </p>
+
+        </header>
+
+
+        <!-- SCRAPBOOK -->
+
+        <main class="journal">
+
+            <div class="book">
+
+
+                <!-- LEFT PAGE -->
+
+                <div class="page left-page">
+
+                    <div class="paper">
+
+                        <div class="sticker sticker-left">
+                            📸
+                        </div>
+
+
+                        <div class="scrapbook-photo">
+
+                            <div class="photo-placeholder">
+                                ♡ photo coming soon ♡
+                            </div>
+
+                        </div>
+
+
+                        <div class="scrapbook-caption">
+
+                            <small>20 September 2026</small>
+
+                            <p>
+                                a little moment worth keeping ♡
+                            </p>
+
+                        </div>
+
+
+                        <div class="page-number">
+                            1
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT PAGE -->
+
+                <div class="page right-page">
+
+                    <div class="paper">
+
+                        <div class="scrapbook-photo scrapbook-photo-right">
+
+                            <div class="photo-placeholder">
+                                ✿ something silly ✿
+                            </div>
+
+                        </div>
+
+
+                        <div class="scrapbook-caption">
+
+                            <small>♡ random find ♡</small>
+
+                            <p>
+                                sometimes things just belong here.
+                            </p>
+
+                        </div>
+
+
+                        <div class="sticker sticker-right">
+                            🎀
+                        </div>
+
+
+                        <div class="page-number">
+                            2
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TURNING PAGE -->
+
+                <div class="turning-page">
+
+                    <div class="paper front">
+
+                        <div class="scrapbook-photo">
+
+                            <div class="photo-placeholder">
+                                ♡ next page ♡
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="paper back">
+
+                        <div class="scrapbook-photo">
+
+                            <div class="photo-placeholder">
+                                ✿ another little memory ✿
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p class="turn-hint">
+                ♡ click the page to turn it ♡
+            </p>
+
+        </main>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            ♡ made with love & a questionable amount of free time ♡
+        </p>
+
+        <p>
+            ✿ last updated: 20/09/2026 ✿
+        </p>
+
+    </footer>
+
+
+    <!-- PAGE TURN -->
+
+    <script>
+
+        const turningPage = document.querySelector(".turning-page");
+
+        turningPage.addEventListener("click", function () {
+
+            turningPage.classList.toggle("flipped");
+
+        });
+
+    </script>
+
+</body>
+
+</html>

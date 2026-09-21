@@ -34,7 +34,7 @@ a:hover {
    ========================= */
 
 .page {
-    width: 1000px;
+    width: 1100px;
     max-width: 94%;
     margin: 35px auto;
 }
@@ -942,7 +942,9 @@ background-image:
     grid-template-columns: 1fr 1fr;
     gap: 18px;
     margin-top: 20px;
+    width: 100%;
 }
+
 
 .life-card {
     display: flex;

@@ -402,7 +402,7 @@ footer {
     position: relative;
 
     width: 100%;
-    height: 570px;
+    height: 620px;
 
     display: flex;
 
@@ -432,14 +432,15 @@ footer {
 
     background-color: #fffdf4;
 
-    background-image:
-        repeating-linear-gradient(
-            to bottom,
-            transparent 0px,
-            transparent 31px,
-            #cbd9e2 32px,
-            transparent 33px
-        );
+  background-image:
+    repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 29px,
+        #cbd9e2 30px,
+        transparent 31px
+    );
+
 
     box-shadow:
         inset 0 0 25px rgba(110, 70, 60, 0.07);
@@ -722,7 +723,7 @@ footer {
 
     width: 100%;
 
-    height: 570px;
+    height: 620px;
 
     display: flex;
 
@@ -783,14 +784,14 @@ footer {
 
     background-color: #fffdf4;
 
-    background-image:
-        repeating-linear-gradient(
-            to bottom,
-            transparent 0px,
-            transparent 31px,
-            #c9d8e2 32px,
-            transparent 33px
-        );
+background-image:
+    repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 29px,
+        #cbd9e2 30px,
+        transparent 31px
+    );
 
 }
 
